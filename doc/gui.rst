@@ -3,12 +3,15 @@
 Graphical User Interface
 ========================
 
-The graphical user interface of COLMAP provides access to most of its
+The graphical user interface of COLMAP provides access to most of the available
 functionality and visualizes the reconstruction process in "real-time". To start
-the GUI, please run the pre-built binaries (Windows: `COLMAP.bat`, Mac:
-`COLMAP.app`) or execute ``./src/exe/colmap``. The GUI application requires an
-attached display with OpenGL 3.2 support. Registered images are visualized in
-red and points in their average point color extracted from the images.
+the GUI, you can run the pre-built packages (Windows: `COLMAP.bat`, Mac:
+`COLMAP.app`), execute ``colmap gui`` if you installed COLMAP or execute
+``./src/exe/colmap gui`` from the CMake build folder. The GUI application
+requires an attached display with at least OpenGL 3.2 support. Registered images
+are visualized in red and reconstructed points in their average point color
+extracted from the images. The viewer can also visualize dense point clouds
+produced from Multi-View Stereo.
 
 
 Model Viewer Controls
@@ -50,9 +53,9 @@ To create a video screen capture of the reconstructed model, choose ``Extras >
 Grab movie``. This dialog allows you to set individual control viewpoints by
 choosing ``Add``. COLMAP generates a fixed number of frames per second between
 each control viewpoint by smoothly interpolating the linear trajectory, and to
-interpolate the employed point and the camera sizes at the time of clicking
+interpolate the configured point and the camera sizes at the time of clicking
 ``Add``. To change the number of frames between two viewpoints or to reorder
-individual viewpoints, modify the time of the viewpoint by double- clicking the
+individual viewpoints, modify the time of the viewpoint by double-clicking the
 respective cell in the table. Note that the video capture requires to set the
 perspective projection model in the render options. You can review the
 trajectory in the viewer, which is rendered in light blue. Choose ``Assemble
